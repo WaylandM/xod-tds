@@ -1,0 +1,61 @@
+{
+  "description": "Convert voltage measured by sensor to total dissolved solids (ppm).",
+  "nodes": [
+    {
+      "id": "BkxtUd7Zj",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 1
+      },
+      "type": "xod/patch-nodes/not-implemented-in-xod"
+    },
+    {
+      "description": "Voltage measured by TDS sensor.",
+      "id": "S1oY8dmZs",
+      "label": "V",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "description": "Total dissolved solids (ppm).",
+      "id": "Ska5IdmZs",
+      "label": "TDS",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 2
+      },
+      "type": "xod/patch-nodes/output-number"
+    },
+    {
+      "description": "Temperature in degrees celsius.",
+      "id": "rJgg_O7Zs",
+      "label": "TempC",
+      "position": {
+        "units": "slots",
+        "x": 4,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "boundLiterals": {
+        "__out__": "5"
+      },
+      "description": "Reference voltage. For the Arduino Uno/Mega the reference voltage is 5. For ESP32 the reference voltage is 3.3V.",
+      "id": "BkbOOuX-s",
+      "label": "V-Ref",
+      "position": {
+        "units": "slots",
+        "x": 3,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-number"
+    }
+  ]
+}
