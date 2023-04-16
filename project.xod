@@ -1,3 +1,6 @@
 {
-  "name": "total-dissolved-solids"
+  "description": "Library for Total Dissolved Solids (TDS) sensor with temperature compensation. A TDS sensor can be used to measure water quality.  Compatible devices include https://www.dfrobot.com/product-1662.html and http://www.cqrobot.wiki/index.php/TDS_(Total_Dissolved_Solids)_Meter_Sensor_SKU:_CQRSENTDS01",
+  "license": "AGPL",
+  "name": "total-dissolved-solids",
+  "version": "0.0.1"
 }

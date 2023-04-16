@@ -1,0 +1,234 @@
+{
+  "description": "Patch demonstrating the use of a thermometer (ds18b20) to report water temperature. Run in debug mode.",
+  "links": [
+    {
+      "id": "Skdr7H3Ffn",
+      "input": {
+        "nodeId": "HkGr7H3Yzn",
+        "pinKey": "HygH9nM1j"
+      },
+      "output": {
+        "nodeId": "SymrXrhFMn",
+        "pinKey": "SyBtREhlW"
+      }
+    },
+    {
+      "id": "H1FHQS2Ffh",
+      "input": {
+        "nodeId": "HkGr7H3Yzn",
+        "pinKey": "HJvYchMki"
+      },
+      "output": {
+        "nodeId": "SymrXrhFMn",
+        "pinKey": "BkGpcpcJQ"
+      }
+    },
+    {
+      "id": "HJ5HmH2tM2",
+      "input": {
+        "nodeId": "SymrXrhFMn",
+        "pinKey": "SyKd0E2x-"
+      },
+      "output": {
+        "nodeId": "HJEr7S2tM3",
+        "pinKey": "HJU8CE2lW"
+      }
+    },
+    {
+      "id": "r1jrXBnFfh",
+      "input": {
+        "nodeId": "B1HQr3YM3",
+        "pinKey": "S1oY8dmZs"
+      },
+      "output": {
+        "nodeId": "ryrB7HhFzn",
+        "pinKey": "HyQ9TDc7Jj"
+      }
+    },
+    {
+      "id": "B12HXS3tGh",
+      "input": {
+        "nodeId": "HJIBXH2Yf3",
+        "pinKey": "HkXK-dGob"
+      },
+      "output": {
+        "nodeId": "B1HQr3YM3",
+        "pinKey": "Ska5IdmZs"
+      }
+    },
+    {
+      "id": "Sy6S7SnFMn",
+      "input": {
+        "nodeId": "ryrB7HhFzn",
+        "pinKey": "HyZqTP97ki"
+      },
+      "output": {
+        "nodeId": "HkGr7H3Yzn",
+        "pinKey": "BJe3c2fyj"
+      }
+    },
+    {
+      "id": "Bk0BQSnKMh",
+      "input": {
+        "nodeId": "HkGr7H3Yzn",
+        "pinKey": "BySNq2f1i"
+      },
+      "output": {
+        "nodeId": "SybS7rhtM2",
+        "pinKey": "rJgJPnGko"
+      }
+    },
+    {
+      "id": "SJyxrXHhtz2",
+      "input": {
+        "nodeId": "ryrB7HhFzn",
+        "pinKey": "HylcavqQJo"
+      },
+      "output": {
+        "nodeId": "SybS7rhtM2",
+        "pinKey": "rJgJPnGko"
+      }
+    },
+    {
+      "id": "SJ_HBhYz2",
+      "input": {
+        "nodeId": "SJuEHhtM3",
+        "pinKey": "SJlIvIMEM"
+      },
+      "output": {
+        "nodeId": "HJEr7S2tM3",
+        "pinKey": "HJU8CE2lW"
+      }
+    },
+    {
+      "id": "r11DShtGh",
+      "input": {
+        "nodeId": "B1HQr3YM3",
+        "pinKey": "rJgg_O7Zs"
+      },
+      "output": {
+        "nodeId": "SJuEHhtM3",
+        "pinKey": "BJkDP8GEM"
+      }
+    },
+    {
+      "id": "SJH_B3YG2",
+      "input": {
+        "nodeId": "SJqvS2tf3",
+        "pinKey": "HkXK-dGob"
+      },
+      "output": {
+        "nodeId": "SJuEHhtM3",
+        "pinKey": "BJkDP8GEM"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "B1HQr3YM3",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 4
+      },
+      "type": "@/voltage-to-tds"
+    },
+    {
+      "boundLiterals": {
+        "ByFjk6Gys": "30"
+      },
+      "id": "SybS7rhtM2",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 0
+      },
+      "type": "wayland/running-median/sample-buffer"
+    },
+    {
+      "boundLiterals": {
+        "HygH9nM1j": "5"
+      },
+      "id": "HkGr7H3Yzn",
+      "position": {
+        "units": "slots",
+        "x": 1,
+        "y": 2
+      },
+      "type": "wayland/running-median/add"
+    },
+    {
+      "boundLiterals": {
+        "SkuhqCqym": "A1"
+      },
+      "id": "SymrXrhFMn",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 1
+      },
+      "type": "xod/gpio/analog-read"
+    },
+    {
+      "boundLiterals": {
+        "B13SCNhl-": "0.1"
+      },
+      "id": "HJEr7S2tM3",
+      "position": {
+        "units": "slots",
+        "x": 3,
+        "y": 0
+      },
+      "type": "xod/core/clock"
+    },
+    {
+      "id": "ryrB7HhFzn",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 3
+      },
+      "type": "wayland/running-median/get-median"
+    },
+    {
+      "id": "HJIBXH2Yf3",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 5
+      },
+      "size": {
+        "height": 1,
+        "units": "slots",
+        "width": 2
+      },
+      "type": "xod/debug/watch"
+    },
+    {
+      "boundLiterals": {
+        "B1VSPLfEG": "D3"
+      },
+      "id": "SJuEHhtM3",
+      "position": {
+        "units": "slots",
+        "x": 5,
+        "y": 2
+      },
+      "type": "xod/common-hardware/ds18b20-thermometer"
+    },
+    {
+      "id": "SJqvS2tf3",
+      "position": {
+        "units": "slots",
+        "x": 5,
+        "y": 3
+      },
+      "size": {
+        "height": 1,
+        "units": "slots",
+        "width": 2
+      },
+      "type": "xod/debug/watch"
+    }
+  ]
+}

@@ -11,9 +11,9 @@
       "type": "xod/patch-nodes/not-implemented-in-xod"
     },
     {
-      "description": "Voltage measured by TDS sensor.",
+      "description": "Analog signal from TDS sensor.",
       "id": "S1oY8dmZs",
-      "label": "V",
+      "label": "Analog",
       "position": {
         "units": "slots",
         "x": 2,

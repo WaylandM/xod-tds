@@ -5,8 +5,9 @@
 node {
 
     void evaluate(Context ctx) {
-        auto voltage = getValue<input_V>(ctx);
+        auto analog = getValue<input_Analog>(ctx);
         auto refV = getValue<input_V_Ref>(ctx);
+        float voltage = analog*refV;
         auto tempC = getValue<input_TempC>(ctx);
         float compensationCoefficient = 1.0 + 0.02 * (tempC-25.0);
         float compensationVoltage = voltage/compensationCoefficient;

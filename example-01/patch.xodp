@@ -1,0 +1,126 @@
+{
+  "comments": [
+    {
+      "content": "Enter water temperature  (degrees celsius) in this tweak node.",
+      "id": "HyKwceqfn",
+      "position": {
+        "units": "slots",
+        "x": 4,
+        "y": 3
+      },
+      "size": {
+        "height": 1,
+        "units": "slots",
+        "width": 4
+      }
+    }
+  ],
+  "description": "Simple example patch. Run in debug mode.",
+  "links": [
+    {
+      "id": "HJvkky3KG2",
+      "input": {
+        "nodeId": "SJkJk3tz2",
+        "pinKey": "rJgg_O7Zs"
+      },
+      "output": {
+        "nodeId": "H1e11kntf3",
+        "pinKey": "ByfGSDjQE"
+      }
+    },
+    {
+      "id": "ry5k1ynYM2",
+      "input": {
+        "nodeId": "BJQJyJ3tf3",
+        "pinKey": "SyKd0E2x-"
+      },
+      "output": {
+        "nodeId": "BkVkkk2KM3",
+        "pinKey": "HJU8CE2lW"
+      }
+    },
+    {
+      "id": "SJny1yhYfn",
+      "input": {
+        "nodeId": "Sk8yykhYGh",
+        "pinKey": "HkXK-dGob"
+      },
+      "output": {
+        "nodeId": "SJkJk3tz2",
+        "pinKey": "Ska5IdmZs"
+      }
+    },
+    {
+      "id": "SkfGJnKzn",
+      "input": {
+        "nodeId": "SJkJk3tz2",
+        "pinKey": "S1oY8dmZs"
+      },
+      "output": {
+        "nodeId": "BJQJyJ3tf3",
+        "pinKey": "SyBtREhlW"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "SJkJk3tz2",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 4
+      },
+      "type": "@/voltage-to-tds"
+    },
+    {
+      "boundLiterals": {
+        "ByfGSDjQE": "25"
+      },
+      "id": "H1e11kntf3",
+      "position": {
+        "units": "slots",
+        "x": 3,
+        "y": 3
+      },
+      "type": "xod/debug/tweak-number"
+    },
+    {
+      "boundLiterals": {
+        "SkuhqCqym": "A1"
+      },
+      "id": "BJQJyJ3tf3",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 3
+      },
+      "type": "xod/gpio/analog-read"
+    },
+    {
+      "boundLiterals": {
+        "B13SCNhl-": "0.1"
+      },
+      "id": "BkVkkk2KM3",
+      "position": {
+        "units": "slots",
+        "x": 1,
+        "y": 2
+      },
+      "type": "xod/core/clock"
+    },
+    {
+      "id": "Sk8yykhYGh",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 5
+      },
+      "size": {
+        "height": 1,
+        "units": "slots",
+        "width": 2
+      },
+      "type": "xod/debug/watch"
+    }
+  ]
+}
